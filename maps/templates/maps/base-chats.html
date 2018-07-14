@@ -1,0 +1,51 @@
+{% load static %}
+<script src="{% static "js/chats.js" %}"></script>
+<div id="chats" class="chats">
+  <div id="msg">
+    <ul class="nav justify-content-center">
+      <li class="nav-item text-center">
+        <img src="{% static 'media/104.png' %}" class="rounded">
+        <p>
+          <strong>104 Bank</strong>
+          <br>
+          <small class="text-secondary">Active 3m ago</small>
+        </p>
+      </li>
+    </ul>
+    <hr> {% for chat in chats %} {% if chat.0 == 0 %}
+    <div class="msg-send-group">
+      <div class="d-flex align-items-end flex-column bd-highlight">
+        <div class="p-2 bd-highlight">
+          <div class="card text-white bg-primary">
+            <div class="card-body">
+              {{ chat.1 |linebreaksbr }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <div class="msg-received-group">
+      <img src="{% static 'media/104profile.png' %}" class="msg-received-group-img rounded float-left">
+      <div class="card bg-light msg-received">
+        <div class="card-body">
+          {{ chat.1 |linebreaksbr }}
+          {% if chat.0 == 2 %}
+          <hr>
+          <a href="/maps?company={{ chat.2 }}&home={{ home }}" 
+             class="btn btn-info btn-lg btn-block" role="button">查看面試地點</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+  <hr>
+  <div class="input-group mb-3">
+    <input id="reply" type="text" class="form-control" placeholder="回覆...">
+    <div class="input-group-append">
+      <button class="btn btn-outline-primary" type="button" id="send-btn" onclick="appendMsg()">傳送</button>
+    </div>
+  </div>
+</div>
+

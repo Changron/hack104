@@ -1,0 +1,27 @@
+.chats {
+  height: 100%;
+  width: 95%;
+  /*position: fixed;*/
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.msg-received {
+  padding-left:0;
+  margin-left: 65px;
+  margin-right: 20%;
+  width: max-content;
+  max-width: 80%;
+}
+
+.msg-received-group {
+  position:relative;
+}
+
+.msg-received-group-img {
+  padding: 3px;
+  position: absolute;
+  bottom: 0;
+}

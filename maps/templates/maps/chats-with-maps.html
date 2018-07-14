@@ -1,0 +1,12 @@
+{% extends "maps/base.html" %}
+{% load static %}
+{% block title %}Maps with chat{% endblock %}
+{% block title-style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/maps.css' %}"></link>
+<link rel="stylesheet" type="text/css" href="{% static 'css/chats.css' %}"></link>
+<link rel="stylesheet" type="text/css" href="{% static 'css/chats-with-maps.css' %}"></link>
+{% endblock %}
+{% block body %}
+{% include 'maps/base-chats.html' %}
+{% include 'maps/base-maps.html' %}
+{% endblock %}

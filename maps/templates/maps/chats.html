@@ -1,0 +1,11 @@
+{% extends "maps/base.html" %}
+{% load static %}
+{% block title %}Chats{% endblock %}
+{% block title-style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/chats.css' %}"></link>
+{% endblock %}
+{% block title-navbar %}Blurred lines Chats{% endblock %}
+{% block body %}
+{% include 'maps/base-chats.html' %}
+{% endblock %}
+

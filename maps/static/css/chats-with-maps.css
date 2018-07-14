@@ -1,0 +1,15 @@
+#map {
+  margin-left: 50%;
+  width: 50%;
+  height: 100%;
+}
+
+.chats {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  border-right: 1px solid black;
+}
